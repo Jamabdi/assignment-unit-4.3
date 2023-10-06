@@ -1,6 +1,8 @@
 console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
+
+
 let basket = [];
 console.log('basket items', basket);
 console.log('expecting false since basket is empty by default');
@@ -21,25 +23,21 @@ addItem('milk');
 console.log(basket);
 addItem('eggs');
 console.log(basket);
+// ................................................................................................
 
+function listItems(){
+for(i=0; i< basket.length; i++){
+    console.log( basket[i]);
+}
+}
+console.log('each item should be logged separately', listItems());
+// ................................................................................................
 
-
-
-
-
-
-
-
-// function listItems(){
-
-// }
-
-// function empty(){
-//     for(items in basket){
-
-//     }
-// }
-
+function empty(){
+    basket.length = 0;
+}
+console.log('This should clear the basket array', empty());
+console.log('empty basket array should be logged', basket);
 
 
 
